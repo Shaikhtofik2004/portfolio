@@ -222,17 +222,103 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-@media (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
+@media (max-width: 992px) {
+  header {
+    padding: 15px 5%;
   }
 
-  .hero-img img {
-    margin-top: 20px;
+  .hero {
+    grid-template-columns: 1fr 250px;
+    gap: 30px;
+    padding: 70px 5%;
+  }
+
+  section {
+    padding: 60px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
   }
 
   nav {
     display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-img img {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 50px 5%;
+  }
+
+  .section-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links a {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h2 {
+    font-size: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  footer {
+    font-size: 14px;
   }
 }
